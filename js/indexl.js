@@ -25,7 +25,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('Hi|荣荣|祝你|生日快乐|那我们，|开始吧！|#countdown 3|#href ../html/BirthdayCake.html');
+      S.UI.simulate('Hi|妈妈|祝你|生日快乐|那我们，|开始吧！|#countdown 3|#href ../html/BirthdayCake.html');
       // S.UI.simulate('#href ../html/BirthdayCake.html');
     }
 

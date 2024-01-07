@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wait</title>
+    <style>
+        body {
+            background-color: #ec9ba6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .h1 {
+            color: aliceblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1 class="h1"></h1>
+<script>
+    let h1 = document.querySelector('.h1');
+    const time = () => {
+        let ms = new Date('2024/01/8') - new Date();
+        let s = parseInt(ms / 1000 % 60)
+        let min = parseInt(ms / 1000 / 60 % 60)
+        let h = parseInt(ms / 1000 / 60 / 60 % 24)
+        let day = parseInt(ms / 1000 / 60 / 60 / 24)
+        h1.textContent = `别急嘛，距离开始还有 ${day} 天 ${h} 小时 ${min} 分钟 ${s} 秒 `
+    }
+    time()
+    setInterval(()=>{
+        time()
+    }, 1000);
+</script>
+</body>
+</html>
