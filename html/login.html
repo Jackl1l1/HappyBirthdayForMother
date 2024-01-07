@@ -36,21 +36,17 @@
             $('form').fadeOut(500);
             $('.wrapper').addClass('form-success');
             alert("请把手机横屏，再点击确定哦~~~")
-
             requestFullScreen();
-            let date = new Date();
-            if (date.getMonth() + 1 === 1 && date.getDate() < 15) {
-                location.href = "wait.html";
-            }
-        } else {
-            alert("姓名是你的小名哦~\n密码是你的生日哦!（如2000/01/01）");
         }
-    }
     else
     {
         alert("密码是你的生日哦!（如2000/01/01）");
     }
     })
+    let date = new Date();
+    if (date.getMonth() + 1 === 1 && date.getDate() < 15) {
+        location.href = "wait.html";
+    }
 
 
     function requestFullScreen() {
